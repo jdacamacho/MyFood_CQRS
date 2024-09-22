@@ -1,19 +1,19 @@
 package com.unicauca.my_food.domain.order_consumption.value_objects;
 
 import java.util.List;
-import java.util.UUID;
 
 import com.unicauca.my_food.infrastucture.exceptionHandler.ownException.BusinessRuleException;
 
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 public class TotalPrice {
-    private String id;
+    private String id_total_price;
     private double totalPrice;
 
     public TotalPrice(){
-        this.id = UUID.randomUUID().toString();
         this.totalPrice = 0;
     }
 

@@ -1,5 +1,6 @@
 package com.unicauca.my_food.infrastucture.MySQL.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -14,6 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class IngredientEntity {
     @Id
+    @Column(length = 200)
     private String id_ingredient;
     private String name;
 }

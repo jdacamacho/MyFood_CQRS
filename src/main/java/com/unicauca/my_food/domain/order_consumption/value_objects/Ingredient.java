@@ -4,14 +4,16 @@ import java.util.UUID;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 @AllArgsConstructor
 public class Ingredient {
-    private String id;
+    private String id_date;
     private String name;
 
     public Ingredient(){
-        this.id = UUID.randomUUID().toString();
+        this.id_date = UUID.randomUUID().toString();
     }
 }

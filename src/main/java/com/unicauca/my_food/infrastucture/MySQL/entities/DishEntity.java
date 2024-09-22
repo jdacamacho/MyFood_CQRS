@@ -2,6 +2,8 @@ package com.unicauca.my_food.infrastucture.MySQL.entities;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
@@ -18,6 +20,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class DishEntity {
     @Id
+    @Column(length = 200)
     private String id_dish;
     private String name;
 

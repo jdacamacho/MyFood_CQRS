@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.unicauca.my_food.application.order_comsuption.IOrderService;
+import com.unicauca.my_food.application.order_comsuption_my_sql.IOrderService;
 import com.unicauca.my_food.domain.order_consumption.Order;
 
 import lombok.RequiredArgsConstructor;

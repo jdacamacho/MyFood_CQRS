@@ -12,17 +12,19 @@ import com.unicauca.my_food.infrastucture.exceptionHandler.ownException.ObjectNo
 import com.unicauca.my_food.infrastucture.exceptionHandler.ownException.ObjectNullException;
 
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 public class Order {
-    private String id;
+    private String id_order;
     private OrderDate date;
     private OrderState state;
     private List<Dish> dishes;
     private TotalPrice totalPrice;    
 
     public Order(){
-        this.id = UUID.randomUUID().toString();
+        this.id_order = UUID.randomUUID().toString();
         this.date = new OrderDate();
         this.state = new OrderState(0);
         this.dishes = new ArrayList<>();
@@ -53,7 +55,7 @@ public class Order {
             throw new ObjectNullException("Dish's id is null...");
 
         for(int i = 0 ; i < this.dishes.size() ; i++){
-            if(this.dishes.get(i).getId().equals(id)){
+            if(this.dishes.get(i).getId_dish().equals(id)){
                 this.dishes.remove(i);
                 return true;
             }

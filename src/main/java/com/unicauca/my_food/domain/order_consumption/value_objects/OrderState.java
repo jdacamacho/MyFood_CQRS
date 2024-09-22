@@ -1,19 +1,20 @@
 package com.unicauca.my_food.domain.order_consumption.value_objects;
 
-import java.util.UUID;
-
 import com.unicauca.my_food.domain.order_consumption.constants.OrderStateConstans;
 import com.unicauca.my_food.infrastucture.exceptionHandler.ownException.BusinessRuleException;
 
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 public class OrderState {
-    private String id;
+    private String id_state;
     private String state;
 
+    public OrderState(){}
+    
     public OrderState(int state){
-        this.id = UUID.randomUUID().toString();
         this.state = this.selectState(state);
     }
 

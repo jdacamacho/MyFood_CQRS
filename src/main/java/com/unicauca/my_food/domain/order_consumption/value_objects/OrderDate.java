@@ -3,18 +3,18 @@ package com.unicauca.my_food.domain.order_consumption.value_objects;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.UUID;
 
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 public class OrderDate {
-    private String id;
+    private String id_date;
     private String date;
     private String hour;
 
     public OrderDate(){
-        this.id = UUID.randomUUID().toString();
         createOrderDate();
         createOrderHour();
     }

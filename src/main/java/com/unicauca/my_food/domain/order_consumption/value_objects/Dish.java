@@ -9,17 +9,19 @@ import com.unicauca.my_food.infrastucture.exceptionHandler.ownException.ObjectNu
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
+@Setter
 @NoArgsConstructor
 public class Dish {
-    private String id;
+    private String id_dish;
     private String name;
     private List<Ingredient> ingredients;
     private double price;
 
     public Dish(String name, double price ){
-        this.id = UUID.randomUUID().toString();
+        this.id_dish = UUID.randomUUID().toString();
         this.name = name;
         this.price = price;
         this.ingredients = new ArrayList<>();
@@ -44,7 +46,7 @@ public class Dish {
             throw new ObjectNullException("Ingredient's id is null...");
 
         for(int i = 0 ; i < this.ingredients.size() ; i++){
-            if(this.ingredients.get(i).getId().equals(id)){
+            if(this.ingredients.get(i).getId_date().equals(id)){
                 this.ingredients.remove(i);
                 return true;
             }
