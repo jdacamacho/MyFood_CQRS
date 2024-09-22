@@ -18,7 +18,7 @@ public class OrderDomainService implements IOrderDomainService{
     @Override
     public boolean changeOrderState(Order order, int state) {
         if(state < 0)
-            throw new BusinessRuleException("State must be major than zero...");
+            throw new BusinessRuleException("State must be major or equals than zero...");
 
         if(state > MAX_STATE_AVAIBLE)
             throw new BusinessRuleException("State is not valid...");

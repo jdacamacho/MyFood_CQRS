@@ -33,6 +33,7 @@ public class Order {
 
     public boolean changeState(int state){
         this.state = new OrderState(state);
+        this.getState().setId_state(id_order);
         return true;
     }
 
